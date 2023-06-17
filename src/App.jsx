@@ -6,12 +6,12 @@ import Products from './components/Products'
 
 function App() {
    const [products] = useState(initialProducts)
-   const { filterProducts, setFilters} = useFilters()
+   const { filterProducts } = useFilters()
    const filteredProducts = filterProducts(products)
 
    return (
       <>
-         <Header setFilters={setFilters}/>
+         <Header/>
          <Products products={filteredProducts}/>
       </>
    )
